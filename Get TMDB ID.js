@@ -37,6 +37,8 @@ for (i in results) {
 }
 var chosen = await chooseMovie.present();
 var chosenID = results[chosen]["id"];
+var url = tmdbURL + "3/movie/" + chosenID + "?api_key=" + tmdbAPI;
+console.log(url)
 
 let show = new Alert;
 show.title = 'The id for ' + results[chosen].title + ' is';
